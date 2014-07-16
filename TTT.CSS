@@ -1,0 +1,78 @@
+body {
+	text-align: center;
+}
+.game_board {
+	border: 5px solid black;
+	text-align: center;
+	position: absolute;
+	top:50px;
+	bottom:20px;
+	right: 50px;
+	left: 50px;
+}
+
+#grid {
+	position: absolute;
+	top:150px;
+	right: 423px;
+	left:423px;
+	bottom: 50px;
+	border:2px dashed blue;
+}
+
+.topleft {
+	float: left;
+	top:20px;
+	left:20px;
+	border:2px solid green;
+	height:100px;
+	width:100px;
+}
+.topmiddle {
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
+.topright {
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
+.middleleft{
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
+.middle{
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
+.middleright {
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
+.bottomleft {
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
+.bottommiddle {
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
+.bottomright {
+	float: left;
+	border: 2px solid green;
+	height:100px;
+	width:100px;
+}
