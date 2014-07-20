@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Tic Tac Toe</title>
-	<link rel="stylesheet" type="text.css" href="TTT.CSS"/>
-</head>
-<body>
-	<div=class"wrapper">
-		<div class="game_board">
-			<h1>Tic Tac Toe</h1>
-			<h2>3 in a row should do it<h2>
-				<div id="grid">
-					<div class="topleft"></div>
-					<div class="topmiddle"></div>
-					<div class="topright"></div>
-					<div class="middleleft"></div>
-					<div class="middle"></div>
-					<div class="middleright"></div>
-					<div class="bottomleft"></div>
-					<div class="bottommiddle"></div>
-					<div class="bottomright"></div>
+
+<html ng-app="TicTacToe">
+	<head>
+		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" href="TTT.CSS"/>
+		<script src="js/angular.min.js"></script>
+	    <script src="js/TTT.js"></script>
+	</head>
+	<body>
+	 <div ng-controller="tttController">
+
+		<div class="wrapper">
+
+			<div>
+				<h2>Time for that old classic</h2>
+				<h2>Way back when we used paper and pencil</h2>
+				<h1>Tic...Tac...TOE!</h1>
+				
+			</div>
+		
+			<div class="gameArea">
+				<div class="row" ng-repeat="row in board">
+					<span ng-repeat="field in row track by $index"><a ng-click="takefield($parent.$index, $index, '✘')">{{field}}</a></span>
+
+					</div>
 				</div>
 		</div>
-	</div>
-</body>
-</html>
+	 </div>
+	</body>
+</html>	
