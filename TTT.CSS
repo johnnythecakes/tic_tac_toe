@@ -1,25 +1,31 @@
 body {
+	background-image: url("brickwall_@2X.png");
 	text-align: center;
-	background-color: lightgrey;
 }
 
 h1, h2 {
 	margin:0;
 	padding:0;
 }
-
-.gameArea {
-	width:60%;
-	background-attachment: blue;
-	margin:0 auto;
+div.wrapper {
+	height:100%;
+	width:100%;
+	border: 2px red dashed;
 }
 
-.row {
-	width: 125px;
-    height: 125px;
-    margin: 2px 2px;
-    border:2px black;
-    background-color: red;
-    display: inline-block;
-    float: left;
+div.gameArea {
+	position: absolute
+	top: 30%;
+	text-align: center;
+	border: 2px black;
+	height: 100%;
+	width: 100%;
+	padding:4px;
 }
+
+div.tile {
+	height: 100%;
+	width:100%;
+	border: 2px blue;
+}
+

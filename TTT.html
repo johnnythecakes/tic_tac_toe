@@ -21,7 +21,7 @@
 		
 			<div class="gameArea">
 				<div class="row" ng-repeat="row in board">
-					<span ng-repeat="field in row track by $index"><a ng-click="takefield($parent.$index, $index, '✘')">{{field}}</a></span>
+					<span ng-repeat="tile in row track by $index"><a ng-click="take tile($parent.$index, $index, '✘')">{{tile}}</a></span>
 
 					</div>
 				</div>
