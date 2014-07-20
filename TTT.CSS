@@ -14,7 +14,6 @@ div.wrapper {
 }
 
 div.gameArea {
-	position: absolute
 	top: 30%;
 	text-align: center;
 	border: 2px black;
@@ -23,7 +22,7 @@ div.gameArea {
 	padding:4px;
 }
 
-div.tile {
+.tile {
 	height: 100%;
 	width:100%;
 	border: 2px blue;

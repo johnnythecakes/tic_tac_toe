@@ -4,7 +4,7 @@
 	<head>
 		<title>Tic Tac Toe</title>
 		<link rel="stylesheet" href="TTT.CSS"/>
-		<script src="js/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.js"></script>
 	    <script src="js/TTT.js"></script>
 	</head>
 	<body>
@@ -20,8 +20,8 @@
 			</div>
 		
 			<div class="gameArea">
-				<div class="row" ng-repeat="row in board">
-					<span ng-repeat="tile in row track by $index"><a ng-click="take tile($parent.$index, $index, '✘')">{{tile}}</a></span>
+				<div class="row" ng-repeat="tile in board">
+					<span class="tile" ng-repeat="tile in row track by $index"><a ng-click="setChoice(tile)">{{tile}}</a></span>
 
 					</div>
 				</div>

@@ -6,7 +6,7 @@ tttApp.controller('tttController', function($scope) {
 			size = 3;
 		}
 
-		$scope.board = [];
+	$scope.board = [];
 		for (var i =0; i< size; ++i){
 			var temp = [];
 			for(var j = 0; j< size; ++j) {
@@ -17,6 +17,12 @@ tttApp.controller('tttController', function($scope) {
 			}
 		}
 
-			$scope.boardCreated = true;
+	$scope.createBoard = true;
+
+	var init = function() {
+		$scope.createBoard(4);
+	};
+	
+	init();
 	};
 });
