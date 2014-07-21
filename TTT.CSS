@@ -22,9 +22,9 @@ div.gameArea {
 	padding:4px;
 }
 
-.tile {
-	height: 100%;
-	width:100%;
+.board {
+	height: 200px;
+	width:200px;
 	border: 2px blue;
 }
 

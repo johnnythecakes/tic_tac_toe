@@ -20,9 +20,11 @@
 			</div>
 
 			<div class="gameArea">
-				<div ng-repeat="tile in board track by $index">
+				<span class="row" ng-repeat="row in board track by $index">
+					<div class="column" ng-repeat="tile in row track by $index">
+					</div>
 					{{board}}
-				</div>
+				</span>
 			</div>
 		</div>
 	</div>
