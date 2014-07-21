@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
 <html ng-app="TicTacToe">
-	<head>
-		<title>Tic Tac Toe</title>
-		<link rel="stylesheet" href="TTT.CSS"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.js"></script>
-	    <script src="js/TTT.js"></script>
-	</head>
-	<body>
-	 <div ng-controller="tttController">
+<head>
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="TTT.CSS"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.js"></script>
+	<script src="js/TTT.js"></script>
+</head>
+<body>
+	<div ng-controller="tttController">
 
 		<div class="wrapper">
 
@@ -16,16 +16,15 @@
 				<h2>Time for that old classic</h2>
 				<h2>Way back when we used paper and pencil</h2>
 				<h1>Tic...Tac...TOE!</h1>
-				
-			</div>
-		
-			<div class="gameArea">
-				<div class="row" ng-repeat="tile in board">
-					<span class="tile" ng-repeat="tile in row track by $index"><a ng-click="setChoice(tile)">{{tile}}</a></span>
 
-					</div>
+			</div>
+
+			<div class="gameArea">
+				<div ng-repeat="tile in board track by $index">
+					{{board}}
 				</div>
+			</div>
 		</div>
-	 </div>
-	</body>
+	</div>
+</body>
 </html>	

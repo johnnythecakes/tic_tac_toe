@@ -1,28 +1,20 @@
 var tttApp = angular.module('TicTacToe', []);
 tttApp.controller('tttController', function($scope) {
 
-	$scope.createBoard = function(size) {
-		if (size === null) {
-			size = 3;
-		}
-
+	// Initializations
+	$scope.size = 3;
 	$scope.board = [];
+
+	var init = function(size) {
 		for (var i =0; i< size; ++i){
-			var temp = [];
 			for(var j = 0; j< size; ++j) {
-				temp.push('♢');//set field
-			}
-			if (temp.length !==0) {
-				$scope.board.push(temp);
+				$scope.board.push(' '); //set field
 			}
 		}
-
-	$scope.createBoard = true;
-
-	var init = function() {
-		$scope.createBoard(4);
-	};
+	};	
 	
-	init();
-	};
+	init($scope.size);
+	console.log($scope.board);
+	
+	
 });
