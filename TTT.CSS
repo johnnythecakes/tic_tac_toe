@@ -19,6 +19,14 @@ div {
 	position:relative;
 }
 
+#pl1 {
+	float:left;
+}
+
+#pl2 {
+	float: right;
+}
+
 .gameArea {
 	width: 700px;
     background-image: url("rockywall.png");
