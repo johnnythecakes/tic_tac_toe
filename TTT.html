@@ -22,9 +22,14 @@
 			<!--player name select-->
 
 			<div class="names">
-				<h3>Can I get your name please?</h3>
-				<select id="pl1" ng-model="playerSelect" ng-options="opt as opt.name for opt in imageList"></select>
-				<select id="pl2" ng-model="playerSelect" ng-options="opt as opt.name for opt in imageList"></select>
+				<div id="pl1">
+					<h3>Player 1 please select name</h3>
+					<select ng-model="playerSelect" ng-options="opt as opt.name for opt in imageList"></select>
+				</div>
+				<div id="pl2">
+					<h3>Player 2 please select name</h3>
+					<select ng-model="playerSelect" ng-options="opt as opt.name for opt in imageList"></select>
+				</div>
 			</div>
 			
 			<!--Game Board-->
