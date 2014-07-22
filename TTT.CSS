@@ -21,9 +21,8 @@ div {
 
 .gameArea {
 	width: 700px;
-	height:700px;
-    background-color: white;
-    border:2px dashed black;
+    background-image: url("rockywall.png");
+    border:11px solid black;
     margin: 50px auto 25px auto;
 }
 

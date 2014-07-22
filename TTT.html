@@ -18,11 +18,18 @@
 				<h1>Tic...Tac...TOE!</h1>
 
 			</div>
+
+			<!--player name select-->
+
+			<div class="names">
+				<h3>Can I get your name please?</h3>
+				<select ng-model="playerSelect" ng-options="opt as opt.name for opt in imageList"></select>
+			</div>
 			
 			<!--Game Board-->
 			<div class="gameArea">
 				<div class="row" ng-repeat="row in board">
-					<div class="tile" ng-repeat="field in row track by $index">
+					<div class="tile" ng-repeat="field in row track by $index" ng-click="markClick(tile)">
 					{{field}}
 					</div>
 				</div>

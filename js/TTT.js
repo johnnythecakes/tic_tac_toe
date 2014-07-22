@@ -1,6 +1,25 @@
 var tttApp = angular.module('TicTacToe', []);
 tttApp.controller('tttController', function($scope) {
 
+/* establish first click is player1 */
+
+/*mark user click with "x" */
+
+/*$scope.markClick = function (tile) {
+	if (tile )
+}*/
+
+
+
+/* sets player choice*/
+
+/*$scope.playerChoice = function(tile) {
+	if (pl)
+}*/
+
+
+/* builds game board */
+
 	$scope.createBoard = function(size, symbol) {
 
 	if (size === null) {
@@ -26,5 +45,19 @@ tttApp.controller('tttController', function($scope) {
 
 	};
 	window.onload=$scope.createBoard(3);
+
+	/* name array to grab player picture from */
+
+	$scope.imageList = [
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Steve',
+      url: 7521,
+    }
+  ];
+  $scope.playerSelect = $scope.imageList[1];
 });	
 	
