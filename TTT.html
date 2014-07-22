@@ -18,13 +18,14 @@
 				<h1>Tic...Tac...TOE!</h1>
 
 			</div>
-
+			
+			<!--Game Board-->
 			<div class="gameArea">
-				<span class="row" ng-repeat="row in board track by $index">
-					<div class="column" ng-repeat="tile in row track by $index">
+				<div class="row" ng-repeat="row in board">
+					<div class="tile" ng-repeat="field in row track by $index">
+					{{field}}
 					</div>
-					{{board}}
-				</span>
+				</div>
 			</div>
 		</div>
 	</div>

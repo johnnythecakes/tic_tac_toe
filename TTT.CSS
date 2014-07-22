@@ -3,28 +3,40 @@ body {
 	text-align: center;
 }
 
+div {
+	display:block;
+}
+
 h1, h2 {
 	margin:0;
 	padding:0;
 }
-div.wrapper {
-	height:100%;
-	width:100%;
-	border: 2px red dashed;
+.wrapper {
+	width:75%;
+	padding-bottom:75%;
+	margin:0 auto;
+	position:relative;
 }
 
-div.gameArea {
-	top: 30%;
-	text-align: center;
-	border: 2px black;
-	height: 100%;
-	width: 100%;
-	padding:4px;
+.gameArea {
+	width: 700px;
+	height:700px;
+    background-color: green;
+    margin: 50px auto 25px auto;
 }
 
-.board {
-	height: 200px;
-	width:200px;
-	border: 2px blue;
+.row {
+	padding:3px;
+
+}
+.tile {
+	border-radius: 15px;
+	background-color: lightgrey;
+	margin: 3px;
+	padding: 0px;
+	width: 100px;
+	height: 100px;
+	border: 10px solid darkgrey;
+	float: left;
 }
 
