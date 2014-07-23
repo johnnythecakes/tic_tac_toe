@@ -57,160 +57,160 @@ $scope.gameStart = false;
 
 	$scope.imageList = [
     {
-      name: 'Zach Johnson',
+      name: 'Ian Goldfarb',
       url: 'images/image00.jpg',
     },
     {
       name: 'Steve',
-      url: 7521,
+      url: 'images/image01.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image02.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image03.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image04.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image05.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image06.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image07.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image08.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image09.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image10.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image11.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image12.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image13.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image14.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image15.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image16.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     }
   ];
   $scope.playerSelect = $scope.imageList[1];
