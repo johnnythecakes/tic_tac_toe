@@ -10,6 +10,10 @@
 <body>
 	<div ng-controller="tttController">
 
+		<div>
+			<img id="pl1image" src="{{playerSelectOne.url}}" alt="" />
+		</div>
+
 		<div class="wrapper">
 
 			<div class="title">
@@ -24,11 +28,11 @@
 			<div class="names">
 				<div id="pl1">
 					<h3>Player 1 please select name</h3>
-					<select ng-model="playerSelect" ng-options="opt as opt.name for opt in imageList"></select>
+					<select ng-model="playerSelectOne" ng-options="opt as opt.name for opt in imageList"></select>
 				</div>
 				<div id="pl2">
 					<h3>Player 2 please select name</h3>
-					<select ng-model="playerSelect" ng-options="opt as opt.name for opt in imageList"></select>
+					<select ng-model="playerSelectTwo" ng-options="opt as opt.name for opt in imageList"></select>
 				</div>
 			</div>
 			

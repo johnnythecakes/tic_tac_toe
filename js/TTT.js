@@ -6,7 +6,7 @@ tttApp.controller('tttController', function($scope) {
 $scope.turnCount = 0;
 console.log($scope.turnCount);
 
-/*mark user click with "x" */
+/*mark user click as player */
 
 $scope.playerOne = "X";
 $scope.playerTwo = "O";
@@ -58,11 +58,159 @@ $scope.gameStart = false;
 	$scope.imageList = [
     {
       name: 'Zach Johnson',
-      url: 3032,
+      url: 'images/image00.jpg',
     },
     {
       name: 'Steve',
       url: 7521,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
+    },
+    {
+      name: 'Zach Johnson',
+      url: 3032,
     }
   ];
   $scope.playerSelect = $scope.imageList[1];

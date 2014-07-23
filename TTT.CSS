@@ -24,6 +24,15 @@ div {
 	float:left;
 }
 
+#pl1image {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height:70px;
+	width:70px;
+	border-radius: 10%;
+}
+
 #pl2 {
 	float: right;
 }
