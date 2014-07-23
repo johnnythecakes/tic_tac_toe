@@ -9,8 +9,9 @@ div {
 
 .title {
 	margin:0;
-	padding:0;
-	top:20px;
+	top:30px;
+	color: #333333;
+	font-family: ‘Arial Black’, Gadget, sans-serif;
 }
 .wrapper {
 	width:75%;
@@ -29,7 +30,8 @@ div {
 
 .gameArea {
 	width: 700px;
-    background-image: url("rockywall.png");
+	background-color: white;
+    /*background-image: url("rockywall.png");*/
     border:11px solid black;
     margin: 120px auto 25px auto;
 }
@@ -40,11 +42,11 @@ div {
 }
 .tile {
 	display:inline-block;
-	background-color: lightgrey;
+	background-image: url("galogo.png");
+	background-size: contain;
 	margin: 3px;
 	padding: 0px;
 	width: 100px;
-	height: 100px;
-	border: 10px solid darkgrey;	
+	height: 100px;	
 }
 

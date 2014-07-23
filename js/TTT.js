@@ -1,21 +1,28 @@
 var tttApp = angular.module('TicTacToe', []);
 tttApp.controller('tttController', function($scope) {
 
-/* establish first click is player1 */
+/* turn counter */
+
+$scope.turnCount = 0;
+console.log($scope.turnCount);
 
 /*mark user click with "x" */
 
-/*$scope.markClick = function (tile) {
-	if (tile )
-}*/
+$scope.playerOne = "X";
+$scope.playerTwo = "O";
 
+	$scope.markClick = function (field) {
+	if ((field =='') && ($scope.turnCount ===0)) {
+		field = $scope.playerOne;
+		$scope.turnCount++;
+		}
+		console.log(field);
+	};
 
+/*condition to initialize game*/
 
-/* sets player choice*/
+$scope.gameStart = false;
 
-/*$scope.playerChoice = function(tile) {
-	if (pl)
-}*/
 
 
 /* builds game board */
@@ -27,7 +34,7 @@ tttApp.controller('tttController', function($scope) {
 	}
 
 	if (size === null) {
-		symbol = "X";
+		symbol = ' ';
 	}
 
 	$scope.board = [];
@@ -35,12 +42,12 @@ tttApp.controller('tttController', function($scope) {
 		for (var i =0; i< size; ++i){
 			var temp = [];
 			for(var j = 0; j< size; ++j) {
-				temp.push(symbol); //set field
+				temp.push(''); //set field
 			}
 			$scope.board.push(temp);
 		}
-		console.log($scope.board);
-		$scope.boardcreated = true;
+		console.log($scope.board);	
+		
 
 
 	};
