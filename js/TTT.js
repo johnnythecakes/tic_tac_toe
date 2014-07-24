@@ -1,5 +1,5 @@
-var tttApp = angular.module('TicTacToe', []);
-tttApp.controller('tttController', function($scope) {
+var tttApp = angular.module('TicTacToe', ["firebase",]);
+tttApp.controller('tttController', function($scope, $firebase) {
 
 /* turn counter */
 
@@ -51,7 +51,7 @@ $scope.gameStart = false;
 
 
 	};
-	window.onload=$scope.createBoard(3);
+	window.onload=$scope.createBoard(4);
 
 	/* name array to grab player picture from */
 
@@ -61,156 +61,160 @@ $scope.gameStart = false;
       url: 'images/image00.jpg',
     },
     {
-      name: 'Steve',
+      name: 'Nhi Tran',
       url: 'images/image01.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Torey Mundkowsky',
       url: 'images/image02.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Jared Cowan',
       url: 'images/image03.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Dohee Kim',
       url: 'images/image04.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'John McDonald',
       url: 'images/image05.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Khoa Ngo',
       url: 'images/image06.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Justin Curatolo',
       url: 'images/image07.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Chadd Chambers',
       url: 'images/image08.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Mavis Zeng',
       url: 'images/image09.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Nick Nish',
       url: 'images/image10.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Xiayi Palmer',
       url: 'images/image11.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Dalton Buckingham',
       url: 'images/image12.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Brandon Kwong',
       url: 'images/image13.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Avi Johnson',
       url: 'images/image14.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Aaron Goldsmith',
       url: 'images/image15.jpg',
     },
     {
-      name: 'Zach Johnson',
+      name: 'Shawn Rodriguez',
       url: 'images/image16.jpg',
     },
     {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
+      name: 'Jeremy Zander',
+      url: 'images/image17.jpg',
+    },
+    {
+      name: 'Adam Schuld',
+      url: 'images/image18.jpg',
+    },
+    {
+      name: 'Jeremi Dudu',
+      url: 'images/image19.jpg',
+    },
+    {
+      name: 'Brant Barger',
+      url: 'images/image20.jpg',
+    },
+    {
+      name: 'Hamilton Karl',
+      url: 'images/image21.jpg',
+    },
+    {
+      name: 'Carolyn Nguyen',
+      url: 'images/image22.jpg',
+    },
+    {
+      name: 'Blaise Thomas',
+      url: 'images/image23.jpg',
+    },
+    {
+      name: 'Quincy Babin',
+      url: 'images/image24.jpg',
+    },
+    {
+      name: 'Anabel Cuevas',
+      url: 'images/image25.jpg',
+    },
+    {
+      name: 'Jared Alexander',
+      url: 'images/image26.jpg',
+    },
+    {
+      name: 'Brian Purcell',
+      url: 'images/image27.jpg',
+    },
+    {
+      name: 'Tony Le',
+      url: 'images/image28.jpg',
+    },
+    {
+      name: 'Levani Maisouradze',
+      url: 'images/image29.jpg',
+    },
+    {
+      name: 'Criselda Valderrama',
+      url: 'images/image30.jpg',
+    },
+    {
+      name: 'Peter Egan',
+      url: 'images/image31.jpg',
+    },
+    {
+      name: 'Benjamin Aragon',
+      url: 'images/image32.jpg',
+    },
+    {
+      name: 'Jordan Hardy',
+      url: 'images/image33.jpg',
+    },
+    {
+      name: 'Alexis Gormley',
+      url: 'images/image34.jpg',
+    },
+    {
+      name: 'Nick Mrozowski',
+      url: 'images/image35.jpg',
+    },
+    {
+      name: 'Kyle Riach',
+      url: 'images/image36.jpg',
     },
     {
       name: 'Zach Johnson',
-      url: 'images/image00.jpg',
+      url: 'images/image37.jpg',
     },
     {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
+      name: 'Kaitlin Jaffe',
+      url: 'images/image38.jpg',
     },
     {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
-    },
-    {
-      name: 'Zach Johnson',
-      url: 'images/image00.jpg',
+      name: 'Mark Arciaga',
+      url: 'images/image37.jpg',
     }
   ];
   $scope.playerSelect = $scope.imageList[1];
