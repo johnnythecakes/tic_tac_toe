@@ -17,8 +17,8 @@
 
 </head>
 <body>
-	<div ng-controller="tttController" /////ng-model"board" for firebase richards example/////////>
-
+	<div ng-controller="tttController" />
+	<!-- add ng-model"board" to controller for firebase ie richards demp -->
 		<div>
 			<img id="pl1image" src="{{playerSelectOne.url}}" alt="" />
 		</div>
@@ -51,16 +51,15 @@
 			
 			<!--Game Board-->
 			<div class="gameArea">
-				<div class="row" ng-repeat="row in board">
-					<div ng-repeat="field in row track by $index" ng-class="{tile:field.icon==true}" ng-click="markClick(field)">
-					{{field}}
-					</div>
+				<div ng-repeat="row in board">
+					<div class="row" ng-repeat="field in row track by $index" ng-class="{tile:field.icon, tilep1:field.icon==false}" ng-click="markClick(field)">
+					{{tile}}
 				</div>
 				<!-- <div class="row" ng-repeat="row in board">
-					<div class="tile" ng-repeat="field in row track by $index" ng-show="{{playerSelectTwo.url}" ng-click="markClick(field)">
-					{{field}}
-					</div>
+					<div ng-repeat="field in row track by $index" ng-class="{tile:field.icon==true }" ng-click="markClick(field)">
+					{{tile}}
 				</div> -->
+				</div>
 			</div>
 		</div>
 	</div>

@@ -26,11 +26,11 @@ div {
 
 #pl1image {
 	position: absolute;
-	top: 5px;
-	left: 5px;
-	height:70px;
-	width:70px;
-	border-radius: 10%;
+	top: 22%;
+	left: 15%;
+	height:100px;
+	width:100px;
+	border-radius: 50%;
 }
 
 #pl2 {
@@ -39,11 +39,11 @@ div {
 
 #pl2image {
 	position: absolute;
-	top: 5px;
-	right: 5px;
-	height:70px;
-	width:70px;
-	border-radius: 10%;
+	top: 22%;
+	right: 15%;
+	height:100px;
+	width:100px;
+	border-radius: 50%;
 }
 
 .gameArea {
@@ -54,17 +54,20 @@ div {
     margin: 120px auto 25px auto;
 }
 
-.row {
+.row{
 	padding:3px;
-
-}
-.tile {
 	display:inline-block;
-	background-image: url("galogo.png");
 	background-size: contain;
 	margin: 3px;
 	padding: 0px;
 	width: 100px;
 	height: 100px;	
+
+}
+.tile {
+	background-image: url("galogo.png");
+}
+.tilep1 {
+	background-image: url("duck.jpg");	
 }
 

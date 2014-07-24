@@ -11,19 +11,21 @@ $scope.playerOne = "X";
 $scope.playerTwo = "O";
 
 	$scope.markClick = function(field) {
-	if ((field.owner === "") && ($scope.turnCount % 2 === 0)) {
-		field.owner = $scope.playerOne;
-    field.icon = false;
+	 if ((field.owner === "") && ($scope.turnCount % 2 === 0)) {
+		  field.owner = $scope.playerOne;
+      field.icon = false;
 	}
-  else {
-    field.owner = $scope.playerTwo;
-    field.icon = false;
+    else {
+      field.owner = $scope.playerTwo;
+      field.icon = false;
   }
      
   
 		console.log(field.icon);
+    console.log(field.owner);
     $scope.turnCount++;
     console.log($scope.turnCount);
+    console.log($scope.board);
 	};
 
 /*condition to initialize game*/
@@ -34,7 +36,7 @@ $scope.gameStart = false;
 
 /* builds game board */
 
-	$scope.createBoard = function(size, symbol) {
+	$scope.createBoard = function(size) {
 
 	if (size === null) {
 		size = 3;
@@ -59,7 +61,7 @@ $scope.gameStart = false;
 
 
 	};
-	window.onload=$scope.createBoard(4);
+	window.onload=$scope.createBoard(3);
 
 	/* name array to grab player picture from */
 
