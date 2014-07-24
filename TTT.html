@@ -52,10 +52,15 @@
 			<!--Game Board-->
 			<div class="gameArea">
 				<div class="row" ng-repeat="row in board">
-					<div class="tile" ng-repeat="field in row track by $index" ng-click="markClick(field)">
+					<div ng-repeat="field in row track by $index" ng-class="{tile:field.icon==true}" ng-click="markClick(field)">
 					{{field}}
 					</div>
 				</div>
+				<!-- <div class="row" ng-repeat="row in board">
+					<div class="tile" ng-repeat="field in row track by $index" ng-show="{{playerSelectTwo.url}" ng-click="markClick(field)">
+					{{field}}
+					</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

@@ -7,16 +7,23 @@ $scope.turnCount = 0;
 console.log($scope.turnCount);
 
 /*mark user click as player */
-
 $scope.playerOne = "X";
 $scope.playerTwo = "O";
 
-	$scope.markClick = function (field) {
-	if ((field =='') && ($scope.turnCount ===0)) {
-		field = $scope.playerOne;
-		$scope.turnCount++;
-		}
-		console.log(field);
+	$scope.markClick = function(field) {
+	if ((field.owner === "") && ($scope.turnCount % 2 === 0)) {
+		field.owner = $scope.playerOne;
+    field.icon = false;
+	}
+  else {
+    field.owner = $scope.playerTwo;
+    field.icon = false;
+  }
+     
+  
+		console.log(field.icon);
+    $scope.turnCount++;
+    console.log($scope.turnCount);
 	};
 
 /*condition to initialize game*/
@@ -42,7 +49,8 @@ $scope.gameStart = false;
 		for (var i =0; i< size; ++i){
 			var temp = [];
 			for(var j = 0; j< size; ++j) {
-				temp.push(''); //set field
+        var maybe = {icon:true, owner:""};
+				temp.push(maybe); //set field
 			}
 			$scope.board.push(temp);
 		}
