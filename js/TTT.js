@@ -26,6 +26,7 @@ $scope.playerTwo = "O";
     $scope.turnCount++;
     console.log($scope.turnCount);
     console.log($scope.board);
+    console.log($scope.board[0][0]);
 	};
 
 /*condition to initialize game*/
@@ -62,6 +63,36 @@ $scope.gameStart = false;
 
 	};
 	window.onload=$scope.createBoard(3);
+
+  /*win check*/
+  // if ($scope.board.owner[0][0] == $scope.board.owner[0][1] && 
+  // ($scope.board.owner[0][2]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else if ($scope.board.owner[1][0] == $scope.board.owner[1][1] && 
+  // $scope.board.owner[1][2]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else if ($scope.board.owner[2][0] == $scope.board.owner[2][1] && 
+  // $scope.board.owner[2][2]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else if ($scope.board.owner[0][0] == $scope.board.owner[1][0] && 
+  // $scope.board.owner[2][0]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else if ($scope.board.owner[0][1] == $scope.board.owner[1][1] && 
+  // $scope.board.owner[2][1]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else if ($scope.board.owner[0][2] == $scope.board.owner[1][2] && 
+  // $scope.board.owner[2][2]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else if ($scope.board.owner[0][0] == $scope.board.owner[1][1] && 
+  // $scope.board.owner[2][2]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else if ($scope.board.owner[0][2] == $scope.board.owner[1][1] && 
+  // $scope.board.owner[2][0]) {
+  //   console.log(($scope.board.owner + " wins!!");
+  //     } else {
+  //       console.log ("its a tie!");
+  //     };
+
 
 	/* name array to grab player picture from */
 
