@@ -19,14 +19,6 @@
 <body>
 	<div ng-controller="tttController" />
 	<!-- add ng-model"board" to controller for firebase ie richards demp -->
-		<div>
-			<img id="pl1image" src="{{playerSelectOne.url}}" alt="" />
-		</div>
-
-		<div>
-			<img id="pl2image" src="{{playerSelectTwo.url}}" alt="" />
-		</div>
-
 		<div class="wrapper">
 
 			<div class="title">
@@ -40,10 +32,12 @@
 
 			<div class="names">
 				<div id="pl1">
+					<img id="pl1image" src="{{playerSelectOne.url}}" alt="" />
 					<h3>Player 1 please select name</h3>
 					<select ng-model="playerSelectOne" ng-options="opt as opt.name for opt in imageList"></select>
 				</div>
 				<div id="pl2">
+					<img id="pl2image" src="{{playerSelectTwo.url}}" alt="" />
 					<h3>Player 2 please select name</h3>
 					<select ng-model="playerSelectTwo" ng-options="opt as opt.name for opt in imageList"></select>
 				</div>
@@ -52,7 +46,7 @@
 			<!--Game Board-->
 			<div class="gameArea">
 				<div ng-repeat="row in board">
-					<div class="row" ng-repeat="field in row track by $index"  ng-click="markClick(field)">
+					<div class="row" ng-repeat="field in row track by $index" ng-class="{tile:field.icon, tilep1: !field.icon}" ng-click="markClick(field)">
 						<img src="{{ ($scope.turnCount % 2 === 0) ? playerSelectOne.url : playerSelectTwo.url }}" alt="" />
 					</div>
 				<!-- <div class="row" ng-repeat="row in board">

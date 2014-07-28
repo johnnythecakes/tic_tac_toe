@@ -1,102 +1,99 @@
-var tttApp = angular.module('TicTacToe', ["firebase",]);
+var tttApp = angular.module('TicTacToe', ["firebase"]);
 tttApp.controller('tttController', function($scope, $firebase) {
 
 /* turn counter */
 
-$scope.turnCount = 0;
+$scope.turnCount = 1;
 console.log($scope.turnCount);
 
 /*mark user click as player */
 $scope.playerOne = "X";
 $scope.playerTwo = "O";
 
-	$scope.markClick = function(field) {
-	 if ((field.owner === "") && ($scope.turnCount % 2 === 0)) {
-		  field.owner = $scope.playerOne;
+  $scope.markClick = function(field) {
+   if ((field.owner === "") && ($scope.turnCount % 2 === 0)) {
+      field.owner = $scope.playerOne;
       field.icon = false;
-	}
+  }
     else {
       field.owner = $scope.playerTwo;
       field.icon = false;
   }
      
   
-		console.log(field.icon);
+    console.log(field.icon);
     console.log(field.owner);
     $scope.turnCount++;
     console.log($scope.turnCount);
     console.log($scope.board);
-    console.log($scope.board[0][0]);
-	};
-
-/*condition to initialize game*/
-
-$scope.gameStart = false;
-
+    console.log($scope.winCheck());
+  };
 
 
 /* builds game board */
 
-	$scope.createBoard = function(size) {
+  $scope.createBoard = function(size) {
 
-	if (size === null) {
-		size = 3;
-	}
+  if (size === null) {
+    size = 3;
+  }
 
-	if (size === null) {
-		symbol = ' ';
-	}
+  if (size === null) {
+    symbol = ' ';
+  }
 
-	$scope.board = [];
+  $scope.board = [];
 
-		for (var i =0; i< size; ++i){
-			var temp = [];
-			for(var j = 0; j< size; ++j) {
+    for (var i =0; i< size; ++i){
+      var temp = [];
+      for(var j = 0; j< size; ++j) {
         var maybe = {icon:true, owner:""};
-				temp.push(maybe); //set field
-			}
-			$scope.board.push(temp);
-		}
-		console.log($scope.board);	
-		
+        temp.push(maybe); //set field
+      }
+      $scope.board.push(temp);
+    }
+    console.log($scope.board);  
+    
 
 
-	};
-	window.onload=$scope.createBoard(3);
+  };
+  window.onload=$scope.createBoard(3);
 
   /*win check*/
-  // if ($scope.board.owner[0][0] == $scope.board.owner[0][1] && 
-  // ($scope.board.owner[0][2]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else if ($scope.board.owner[1][0] == $scope.board.owner[1][1] && 
-  // $scope.board.owner[1][2]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else if ($scope.board.owner[2][0] == $scope.board.owner[2][1] && 
-  // $scope.board.owner[2][2]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else if ($scope.board.owner[0][0] == $scope.board.owner[1][0] && 
-  // $scope.board.owner[2][0]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else if ($scope.board.owner[0][1] == $scope.board.owner[1][1] && 
-  // $scope.board.owner[2][1]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else if ($scope.board.owner[0][2] == $scope.board.owner[1][2] && 
-  // $scope.board.owner[2][2]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else if ($scope.board.owner[0][0] == $scope.board.owner[1][1] && 
-  // $scope.board.owner[2][2]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else if ($scope.board.owner[0][2] == $scope.board.owner[1][1] && 
-  // $scope.board.owner[2][0]) {
-  //   console.log(($scope.board.owner + " wins!!");
-  //     } else {
-  //       console.log ("its a tie!");
-  //     };
+  $scope.winCheck=function() {
+  if ($scope.board.owner[0][0] == $scope.board.owner[0][1] && 
+  ($scope.board.owner[0][2])) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else if ($scope.board.owner[1][0] == $scope.board.owner[1][1] && 
+  $scope.board.owner[1][2]) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else if ($scope.board.owner[2][0] == $scope.board.owner[2][1] && 
+  $scope.board.owner[2][2]) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else if ($scope.board.owner[0][0] == $scope.board.owner[1][0] && 
+  $scope.board.owner[2][0]) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else if ($scope.board.owner[0][1] == $scope.board.owner[1][1] && 
+  $scope.board.owner[2][1]) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else if ($scope.board.owner[0][2] == $scope.board.owner[1][2] && 
+  $scope.board.owner[2][2]) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else if ($scope.board.owner[0][0] == $scope.board.owner[1][1] && 
+  $scope.board.owner[2][2]) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else if ($scope.board.owner[0][2] == $scope.board.owner[1][1] && 
+  $scope.board.owner[2][0]) {
+    console.log(($scope.board.owner + " wins!!"));
+      } else {
+        console.log ("its a tie!");
+      }
+};
 
 
-	/* name array to grab player picture from */
+  /* name array to grab player picture from */
 
-	$scope.imageList = [
+  $scope.imageList = [
     {
       name: 'Ian Goldfarb',
       url: 'images/image00.jpg',
@@ -259,5 +256,5 @@ $scope.gameStart = false;
     }
   ];
   $scope.playerSelect = $scope.imageList[1];
-});	
-	
+}); 
+  
