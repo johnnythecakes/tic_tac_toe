@@ -10,27 +10,25 @@ console.log($scope.turnCount);
 $scope.playerOne = "X";
 $scope.playerTwo = "O";
 
-  $scope.markClick = function(field) {
+  $scope.markClick = function(field, row, col) {
     /*if (field.owner=='') { */
      if ($scope.turnCount % 2 === 0) {
         field.owner = $scope.playerOne;
         field.icon = false;
-        $scope.board[field]=field.owner;
+        // $scope.board[field]=field.owner;
       }
         else {
           field.owner = $scope.playerTwo;
           field.icon = false;
-          $scope.board[field]=field.owner;
-      };
-       
-    
-      console.log(field.icon);
-      console.log(field.owner);
+          // $scope.board[field]=field.owner;
+      }
       $scope.turnCount++;
+
+      if ($scope.turnCount >=5) {
+        $scope.winCheck();
+      }
       console.log($scope.turnCount);
-      console.log($scope.board);
-      $scope.winCheck();
-    };
+  }
   /*};*/
 
 
@@ -65,33 +63,31 @@ $scope.playerTwo = "O";
 
   /*win check*/
   $scope.winCheck=function() {
-  if ($scope.board.field.owner[0][0] == $scope.board.field.owner[0][1] && 
-  ($scope.board.field.owner[0][2])) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else if ($scope.board.field.owner[1][0] == $scope.board.field.owner[1][1] && 
-  $scope.board.field.owner[1][2]) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else if ($scope.board.field.owner[2][0] == $scope.board.field.owner[2][1] && 
-  $scope.board.field.owner[2][2]) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else if ($scope.board.field.owner[0][0] == $scope.board.field.owner[1][0] && 
-  $scope.board.field.owner[2][0]) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else if ($scope.board.field.owner[0][1] == $scope.board.field.owner[1][1] && 
-  $scope.board.field.owner[2][1]) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else if ($scope.board.field.owner[0][2] == $scope.board.field.owner[1][2] && 
-  $scope.board.field.owner[2][2]) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else if ($scope.board.field.owner[0][0] == $scope.board.field.owner[1][1] && 
-  $scope.board.field.owner[2][2]) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else if ($scope.board.field.owner[0][2] == $scope.board.field.owner[1][1] && 
-  $scope.board.field.owner[2][0]) {
-    console.log(($scope.board.field.owner + " wins!!"));
-      } else {
-        console.log ("its a tie!");
-      }
+    for (var i = 0; i<$scope.board.length; i++) {
+      var xHoriz= 0,
+        oHoriz = 0,
+        xVert = 0,
+        oVert = 0;
+        for(var j = 0; j<$scope.board.length; j++) {
+          if ($scope.board[i][j].owner == $scope.playerOne) {
+            if(++xHoriz == $scope.board.length)
+              alert("x won horizontal");
+          }
+          if ($scope.board[i][j].owner == $scope.playerTwo) {
+            if(++oHoriz == $scope.board.length)
+              alert("o won horizontal");;
+          }
+          if ($scope.board[j][i].owner == $scope.playerOne) {
+            if(++xVert == $scope.board.length)
+              alert("x won vertical");
+          }
+          if ($scope.board[j][i].owner == $scope.playerTwo) {
+            if(++oVert == $scope.board.length)
+              alert("o won vertical");
+          }
+          console.log(xHoriz, oHoriz, xVert, oVert);
+        }
+    }
 };
 
 

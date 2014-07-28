@@ -45,8 +45,8 @@
 			<!-- is there a player turn yet if not use this image Lorin nested conditional-->
 			<!--Game Board-->
 			<div class="gameArea">
-				<div ng-repeat="row in board">
-					<div class="row" ng-repeat="field in row track by $index" ng-class="{tile:field.icon, tilep1: !field.icon}" ng-click="markClick(field)">
+				<div ng-repeat="row in board track by $index">
+					<div class="row" ng-repeat="field in row track by $index" ng-class="{tile:field.icon, tilep1: !field.icon}" ng-click="markClick(field, $parent.$index, $index)">
 						<img ng-show="field.icon==false"src="{{ (field.owner == playerOne) ? playerSelectOne.url : playerSelectTwo.url }}" alt="" />
 					</div>
 				</div>
