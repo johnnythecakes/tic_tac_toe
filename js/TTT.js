@@ -3,7 +3,7 @@ tttApp.controller('tttController', function($scope, $firebase) {
 
 /* turn counter */
 
-$scope.turnCount = 1;
+$scope.turnCount = 0;
 console.log($scope.turnCount);
 
 /*mark user click as player */
@@ -11,23 +11,27 @@ $scope.playerOne = "X";
 $scope.playerTwo = "O";
 
   $scope.markClick = function(field) {
-   if ((field.owner === "") && ($scope.turnCount % 2 === 0)) {
-      field.owner = $scope.playerOne;
-      field.icon = false;
-  }
-    else {
-      field.owner = $scope.playerTwo;
-      field.icon = false;
-  }
-     
-  
-    console.log(field.icon);
-    console.log(field.owner);
-    $scope.turnCount++;
-    console.log($scope.turnCount);
-    console.log($scope.board);
-    console.log($scope.winCheck());
-  };
+    /*if (field.owner=='') { */
+     if ($scope.turnCount % 2 === 0) {
+        field.owner = $scope.playerOne;
+        field.icon = false;
+        $scope.board[field]=field.owner;
+      }
+        else {
+          field.owner = $scope.playerTwo;
+          field.icon = false;
+          $scope.board[field]=field.owner;
+      };
+       
+    
+      console.log(field.icon);
+      console.log(field.owner);
+      $scope.turnCount++;
+      console.log($scope.turnCount);
+      console.log($scope.board);
+      $scope.winCheck();
+    };
+  /*};*/
 
 
 /* builds game board */
@@ -61,30 +65,30 @@ $scope.playerTwo = "O";
 
   /*win check*/
   $scope.winCheck=function() {
-  if ($scope.board.owner[0][0] == $scope.board.owner[0][1] && 
-  ($scope.board.owner[0][2])) {
-    console.log(($scope.board.owner + " wins!!"));
-      } else if ($scope.board.owner[1][0] == $scope.board.owner[1][1] && 
-  $scope.board.owner[1][2]) {
-    console.log(($scope.board.owner + " wins!!"));
-      } else if ($scope.board.owner[2][0] == $scope.board.owner[2][1] && 
-  $scope.board.owner[2][2]) {
-    console.log(($scope.board.owner + " wins!!"));
-      } else if ($scope.board.owner[0][0] == $scope.board.owner[1][0] && 
-  $scope.board.owner[2][0]) {
-    console.log(($scope.board.owner + " wins!!"));
-      } else if ($scope.board.owner[0][1] == $scope.board.owner[1][1] && 
-  $scope.board.owner[2][1]) {
-    console.log(($scope.board.owner + " wins!!"));
-      } else if ($scope.board.owner[0][2] == $scope.board.owner[1][2] && 
-  $scope.board.owner[2][2]) {
-    console.log(($scope.board.owner + " wins!!"));
-      } else if ($scope.board.owner[0][0] == $scope.board.owner[1][1] && 
-  $scope.board.owner[2][2]) {
-    console.log(($scope.board.owner + " wins!!"));
-      } else if ($scope.board.owner[0][2] == $scope.board.owner[1][1] && 
-  $scope.board.owner[2][0]) {
-    console.log(($scope.board.owner + " wins!!"));
+  if ($scope.board.field.owner[0][0] == $scope.board.field.owner[0][1] && 
+  ($scope.board.field.owner[0][2])) {
+    console.log(($scope.board.field.owner + " wins!!"));
+      } else if ($scope.board.field.owner[1][0] == $scope.board.field.owner[1][1] && 
+  $scope.board.field.owner[1][2]) {
+    console.log(($scope.board.field.owner + " wins!!"));
+      } else if ($scope.board.field.owner[2][0] == $scope.board.field.owner[2][1] && 
+  $scope.board.field.owner[2][2]) {
+    console.log(($scope.board.field.owner + " wins!!"));
+      } else if ($scope.board.field.owner[0][0] == $scope.board.field.owner[1][0] && 
+  $scope.board.field.owner[2][0]) {
+    console.log(($scope.board.field.owner + " wins!!"));
+      } else if ($scope.board.field.owner[0][1] == $scope.board.field.owner[1][1] && 
+  $scope.board.field.owner[2][1]) {
+    console.log(($scope.board.field.owner + " wins!!"));
+      } else if ($scope.board.field.owner[0][2] == $scope.board.field.owner[1][2] && 
+  $scope.board.field.owner[2][2]) {
+    console.log(($scope.board.field.owner + " wins!!"));
+      } else if ($scope.board.field.owner[0][0] == $scope.board.field.owner[1][1] && 
+  $scope.board.field.owner[2][2]) {
+    console.log(($scope.board.field.owner + " wins!!"));
+      } else if ($scope.board.field.owner[0][2] == $scope.board.field.owner[1][1] && 
+  $scope.board.field.owner[2][0]) {
+    console.log(($scope.board.field.owner + " wins!!"));
       } else {
         console.log ("its a tie!");
       }
