@@ -25,7 +25,12 @@
 				<h2>Time for that old classic</h2>
 				<h2>Way back when we used paper and pencil</h2>
 				<h1>Tic...Tac...TOE!</h1>
-
+				<span id="message" ng-show="playerOneWon">
+					{{playerSelectOne.name + " " + "won!" }}
+				</span>
+				<span id="message" ng-show="playerTwoWon">
+					<h1>{{playerSelectTwo.name + " " + "won!"}}</h1>
+				</span>				
 			</div>
 
 			<!--player name select-->
@@ -39,7 +44,9 @@
 				<div id="pl2">
 					<img id="pl2image" src="{{playerSelectTwo.url}}" alt="" />
 					<h3>Player 2 please select name</h3>
-					<select ng-model="playerSelectTwo" ng-options="opt as opt.name for opt in imageList"></select>
+					<select ng-model="playerSelectTwo" ng-options="opt as opt.name for opt in imageList">
+    </select>
+    </select></select>
 				</div>
 			</div>
 			<!-- is there a player turn yet if not use this image Lorin nested conditional-->
