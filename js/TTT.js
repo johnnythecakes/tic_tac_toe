@@ -9,6 +9,8 @@ console.log($scope.turnCount);
 /*mark user click as player */
 $scope.playerOne = "X";
 $scope.playerTwo = "O";
+$scope.playerOneWon = false;
+$scope.playerTwoWon = false;
 
   $scope.markClick = function(field, row, col) {
     /*if (field.owner=='') { */
@@ -63,7 +65,7 @@ $scope.playerTwo = "O";
 
   /*win check*/
   $scope.winCheck=function() {
-    for (var i = 0; i<$scope.board.length; i++) {
+    for (var i = 0; i< $scope.board.length; i++) {
       var xHoriz= 0,
         oHoriz = 0,
         xVert = 0,
@@ -71,19 +73,23 @@ $scope.playerTwo = "O";
         for(var j = 0; j<$scope.board.length; j++) {
           if ($scope.board[i][j].owner == $scope.playerOne) {
             if(++xHoriz == $scope.board.length)
-              alert("x won horizontal");
+              $scope.playerOneWon = true;
+              document.getElementById('message').style.background = "rgba(0,128,0,0.4)";;
           }
           if ($scope.board[i][j].owner == $scope.playerTwo) {
             if(++oHoriz == $scope.board.length)
-              alert("o won horizontal");;
+              $scope.playerTwoWon = true;
+              document.getElementById('message').style.background = "rgba(0,128,0,0.4)";
           }
           if ($scope.board[j][i].owner == $scope.playerOne) {
             if(++xVert == $scope.board.length)
-              alert("x won vertical");
+              $scope.playerOneWon = true;
+              document.getElementById('message').style.background = "rgba(0,128,0,0.4)";
           }
           if ($scope.board[j][i].owner == $scope.playerTwo) {
             if(++oVert == $scope.board.length)
-              alert("o won vertical");
+              $scope.playerTwoWon = true;
+              document.getElementById('message').style.background = "rgba(0,128,0,0.4)";
           }
           console.log(xHoriz, oHoriz, xVert, oVert);
         }
@@ -92,7 +98,6 @@ $scope.playerTwo = "O";
 
 
   /* name array to grab player picture from */
-
   $scope.imageList = [
     {
       name: 'Ian Goldfarb',
@@ -255,6 +260,6 @@ $scope.playerTwo = "O";
       url: 'images/image37.jpg',
     }
   ];
-  $scope.playerSelect = $scope.imageList[1];
+  $scope.playerSelect = $scope.imageList;
 }); 
   
